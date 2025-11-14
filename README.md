@@ -54,3 +54,32 @@ This project demonstrates a simple ETL (Extract, Transform, Load) pipeline using
 - Creates/updates `orders.db` with cleaned data.
 
 ---
+
+# Day 2: Random User ETL Pipeline
+
+This project fetches random user data from an API, processes it, and loads it into a local SQLite database.
+
+## What It Does
+
+- **Extract:** Fetches 10 random users from the [randomuser.me](https://randomuser.me/) API.
+- **Transform:** Flattens the JSON data and selects relevant fields (first name, last name, gender, email, city, country).
+- **Load:** Saves the user data to a local SQLite database (`users.db`) in the `random_users` table.
+- **Summary:** Prints the number of users fetched, counts by gender, and the top 3 countries represented.
+
+## How to Run
+
+1. Install dependencies:
+   ```sh
+   pip install pandas requests
+   ```
+2. Run the script:
+   ```sh
+   python etl_users.py
+   ```
+
+## Output
+
+- Prints summary statistics to the console.
+- Creates/updates `users.db` with user data.
+
+---
